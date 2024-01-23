@@ -7,14 +7,147 @@
     <title>Hockey's Site</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- tailwind custom class -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'color-primary': '#FF4240',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- custom styles -->
+    <style>
+        .font-manrope {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .color-span {
+            color: #FF4240;
+        }
+
+        .color-text {
+            color: #424247;
+        }
+    </style>
+
 </head>
 
-<body>
-    <header>
-
+<body class="font-manrope mx-5 lg:my-14">
+    <header class="md:container md:mx-auto">
+        <nav>
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Pages</a></li>
+                            <li><a>Blog</a></li>
+                            <li><a>Contact</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost text-2xl lg:text-4xl font-extrabold">Hockey<span
+                            class="color-span">'</span>s</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a class="text-base font-normal"><span class="color-span">Home</span></a></li>
+                        <li><a class="text-base font-normal color-text">About</a></li>
+                        <li><a class="text-base font-normal color-text">Pages</a></li>
+                        <li><a class="text-base font-normal color-text">Blog</a></li>
+                        <li><a class="text-base font-normal color-text">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <img src="Images/Frame.png" alt="">
+                    <a class="btn text-lg lg:text-xl bg-color-primary text-white">Get Ticket</a>
+                </div>
+            </div>
+        </nav>
     </header>
-    <main>
+    <main class="md:container md:mx-auto mt-6">
+        <!-- carasoul section -->
+        <section>
+            <div class="carousel max-w-80 lg:max-w-full mx-4 rounded-2xl">
+                <div id="slide1" class="carousel-item relative w-full">
+                    <img src="Images/1.png" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide4" class="btn btn-circle">❮</a>
+                        <a href="#slide2" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide2" class="carousel-item relative w-full">
+                    <img src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                      <a href="#slide1" class="btn btn-circle">❮</a> 
+                      <a href="#slide3" class="btn btn-circle">❯</a>
+                    </div>
 
+        </section>
+
+        <!-- professional hockeys section -->
+
+        <section class="text-center my-14">
+            <h1 class="text-4xl font-extrabold mb-6">Professional Hockeys Club </h1>
+            <p class="max-w-72 lg:max-w-2xl mx-auto color-text mb-6">Welcome!!! Here we provide the professionnal help
+                you need
+                for participating in the national levels. We also provide with many other daily facilities like prayer
+                rooms and stuffs. Join us!!!</p>
+            <!-- radial progress section -->
+            <section class="flex flex-col lg:flex-row items-stretch justify-center mt-4">
+                <div>
+                    <div class="radial-progress text-[#FF4240] rotate-90" style="--value: 87;" role="progressbar"><span
+                            class="-rotate-90 text-black font-extrabold text-2xl">87%</span></div>
+                    <h1 class="text-xl font-semibold ">Prayer Facility</h1>
+                    <p class=" max-w-60 lg:max-w-64 mx-auto font-normal text-base color-text mb-6">Here we provide
+                        prayer facilities for the players. Join us!!</p>
+                </div>
+                <div>
+                    <div class="radial-progress text-[#49D293] rotate-90" style="--value: 95;" role="progressbar"><span
+                            class="-rotate-90 text-black font-extrabold text-2xl">95%</span></div>
+                    <h1 class="text-xl font-semibold ">Experienced Coach</h1>
+                    <p class=" max-w-60 lg:max-w-64 mx-auto font-normal text-base color-text mb-6">Here we provide
+                        experienced coaches for the players.</p>
+                </div>
+                <div>
+                    <div class="radial-progress text-[#FFB546] rotate-90" style="--value: 90;" role="progressbar"><span
+                            class="-rotate-90 text-black font-extrabold text-2xl">90%</span></div>
+                    <h1 class="text-xl font-semibold ">Senior Player</h1>
+                    <p class=" max-w-60 lg:max-w-64 mx-auto font-normal text-base color-text mb-6">Here we have many
+                        senior players who contribute a lot in teaching the newcomers.</p>
+                </div>
+                <div>
+                    <div class="radial-progress text-[#4C8DF1] rotate-90" style="--value: 80;" role="progressbar"><span
+                            class="-rotate-90 text-black font-extrabold text-2xl">80%</span></div>
+                    <h1 class="text-xl font-semibold ">Training Ground</h1>
+                    <p class=" max-w-60 lg:max-w-64 mx-auto font-normal text-base color-text mb-6">Our training ground
+                        is famous for its compatibility with the players.</p>
+                </div>
+            </section>
+        </section>
+        <!-- program section -->
+        <section class="text-center my-14">
+            <h1 class="text-4xl font-extrabold mb-6">Program Sections</h1>
+            <p class="max-w-72 lg:max-w-2xl mx-auto color-text mb-6">Welcome!!! Here we provide the following programs for helping the newcomers. Have a great time here with us!!</p>
+        </section>
     </main>
     <footer>
 
